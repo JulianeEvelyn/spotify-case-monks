@@ -102,12 +102,40 @@ const APIController = (function () {
       }));
   };
 
+  const createPostData = (artists) => {
+    return {
+      github_url: "https://github.com/JulianeEvelyn/spotify-case-monks",
+      name: "Juliane Evelyn",
+      pop_ranking: filterAndSortPopArtists(artists).map(artist => ({
+        artist_name: artist.name,
+        followers: artist.seguidores
+      })),
+      genre_ranking: getTopGenres(artists).map(genre => genre.genre)
+    };
+  };
+
+  const sendPostRequest = async (data) => {
+    const response = await fetch("https://psel-solution-automation-cf-ubqz773kaq-uc.a.run.app?access_token=bC2lWA5c7mt1rSPR", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
+
+    if (!response.ok) throw new Error("Failed to send POST request");
+    const result = await response.json();
+    console.log("POST request result:", result);
+  };
+
   const updatePageWithPopArtistsAndGenres = async () => {
     try {
       const token = await _getToken();
       const artistsData = await fetchArtistsData(token, artistIds);
       renderPopArtists(filterAndSortPopArtists(artistsData));
       renderTopGenres(getTopGenres(artistsData));
+      const postData = createPostData(artistsData);
+      await sendPostRequest(postData);
     } catch (error) {
       console.error("Error updating page:", error);
     }
