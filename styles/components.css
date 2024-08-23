@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--cor-bg-icon);
-    padding: 30px;
+    padding: 25px;
     border-radius: 45px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
@@ -23,14 +23,14 @@
   
   .artist-rank {
     color: #ffffff;
-    font-size: 4.5rem; 
+    font-size: 3.8rem; 
     font-weight: bold;
     text-align: center;
   }
   
   .artist-image {
-    width: 130px; 
-    height: 130px; 
+    width: 110px; 
+    height: 110px; 
     object-fit: cover;
     border-radius: 50%;
     cursor: pointer;
@@ -46,7 +46,7 @@
   .artist-name {
     color: #ffffff;
     text-align: start;
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-weight: 700;
     margin: 0;
     cursor: pointer;
@@ -62,7 +62,7 @@
   
   .stats-line {
     position: relative;
-    font-size: 1.375rem; 
+    font-size: 1.2rem; 
     margin: 2px 0;
     color: #b3b3b3;
   }
@@ -86,7 +86,7 @@
   
   .popularity-bar {
     background-color: var(--cor-verde);
-    height: 37px;
+    height: 40px;
     border-radius: 25px;
     transition: width 0.3s ease;
     width: 0;
@@ -117,12 +117,12 @@
   }
   
   .popularity-score-main {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bold;
   }
   
   .popularity-score-sub {
-    font-size: 1.375rem;
+    font-size: 1.175rem;
     color: #b3b3b3;
   }
   
