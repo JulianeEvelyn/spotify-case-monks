@@ -1,0 +1,72 @@
+@media (max-width: 800px) {
+    .artists-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+  
+    #content h1, #content h2 {
+      font-size: 2rem;
+    }
+  
+    .artist-name {
+      font-size: 1.6rem;
+    }
+  
+    .stats-line {
+      font-size: 1.1rem;
+    }
+  
+    .artist-rank {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .genre-item {
+      font-size: 1rem;
+      padding: 8px 16px;
+    }
+  
+    #content h1, #content h2 {
+      font-size: 2rem;
+    }
+  
+    .artist-name {
+      font-size: 1.6rem;
+    }
+  
+    .stats-line {
+      font-size: 1.1rem;
+    }
+  
+    .artist-rank {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (max-width: 564px) {
+    .popularity-bar-wrapper {
+      min-width: 150px;
+      margin: 0 5px;
+    }
+  
+    .popularity-bar-wrapper:hover::after {
+      content: ""; 
+      visibility: hidden; 
+    }
+  
+    .pop-artist {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .artist-info {
+      align-items: flex-start;
+    }
+  
+    .stats-line:hover::after {
+      content: ""; 
+    }
+  }
+  

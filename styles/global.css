@@ -1,0 +1,32 @@
+:root {
+    --cor-bg: #000000;
+    --cor-bg-frente: #121212;
+    --cor-bg-icon: #1f1f1f;
+    --cor-bg-frente-hover: #43414a;
+    --cor-verde: #1DB954;
+  }
+  
+  body {
+    font-family: "Ubuntu", sans-serif;
+    background-color: var(--cor-bg);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
